@@ -1,0 +1,6 @@
+﻿  matmul.c
+C:\Users\Amanda\Desktop\Data Architecture\Lab4\assignment4\assignment4\matmul.c(66,12): warning C4101:  'k': unreferenced local variable
+C:\Users\Amanda\Desktop\Data Architecture\Lab4\assignment4\assignment4\matmul.c(65,6): warning C4101:  'I': unreferenced local variable
+C:\Users\Amanda\Desktop\Data Architecture\Lab4\assignment4\assignment4\matmul.c(65,9): warning C4101:  'J': unreferenced local variable
+C:\Users\Amanda\Desktop\Data Architecture\Lab4\assignment4\assignment4\matmul.c(65,12): warning C4101:  'K': unreferenced local variable
+  assignment4.vcxproj -> C:\Users\Amanda\Desktop\Data Architecture\Lab4\assignment4\Debug\assignment4.exe
