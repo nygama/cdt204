@@ -82,7 +82,7 @@ void version4(int mat1[N][N], int mat2[N][N], int result[N][N])
 	}
 }
 
-// Try AVX
+// Try SSE
 void version5(int mat1[N][N], int mat2[N][N], int result[N][N])
 {
 	//Fill your code here
