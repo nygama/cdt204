@@ -86,13 +86,18 @@ void version4(int mat1[N][N], int mat2[N][N], int result[N][N])
 void version5(int mat1[N][N], int mat2[N][N], int result[N][N])
 {
 	//Fill your code here
-	__m128 a, b, c;
+	__m128i a, b, r;									// The type to use.
 	for (int i = 0; i < N; ++i)
 	{
 		for (int j = 0; j < N; ++j)
 		{
-			for (int k = 0; k < N; ++k)
-				_mm_load_ps(&mat1[i]);
+			a = _mm_set1_epi32(mat1[i][j]);							//Load matrix 1 (number top be multiplied with mat2 column).
+				for (int k = 0; k < N; k++) {
+					b = _mm_loadu_si128((__m128i*)&mat2[j][k]);		// load matrix 2 (column number).
+					r = _mm_loadu_si128((__m128i*)&result[i][k]);	// Load the right index to be added to.
+					r = _mm_add_epi32(r, _mm_mul_epu32(a, b));		// Multiply a and b and add it in r.
+					_mm_storeu_si128((__m128i*)&result[i][j], r);	// Store r in the result.
+				}
 		}
 	}
 }
